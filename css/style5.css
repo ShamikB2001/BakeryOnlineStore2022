@@ -1,0 +1,25 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Brush Script MT', cursive;
+}
+body
+{
+	background-color: lightcyan;
+}
+table
+{
+	border: none;
+	width: 100%;
+}
+th
+{
+	background-color: #e066ff;
+	height: 50px;
+}
+td
+{
+	background-color: #f5ccff;
+}
