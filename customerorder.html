@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+	<title></title>
+</head>
+<link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}">
+<body>
+	<div class="Big">
+		<div class="BigLeft">
+			<div class="MiniLeft">
+				<form method="post" action="../cto/{{ x.id }}">
+				{% csrf_token %}
+				<span>Item Name:</span><span>{{ x.bakeryname }}</span><br>
+				<span>Item Price: </span><span>{{ x.bakeryprice }}</span><br>
+				</form>
+				<form method="post" action="../ceo">
+				{% csrf_token %}
+				<input type="text" placeholder="Enter your First Name" name="firstname" class="textbox">
+				<input type="text" placeholder="Enter your Last Name" name="lastname"  class="textbox"><br><br>
+				<input type="text" placeholder="Address" name="address"  class="textbox">
+				<input type="tel" placeholder="Pincode" name="pincode"  class="textbox"><br><br>
+				<input type="tel" placeholder="Enter Phone No." name="phone"  class="textbox2"><br><br>
+				<input type="email" placeholder="Enter Email Id" name="email"  class="textbox2"><br><br>
+				<input type="tel" placeholder="Enter Whatsapp No." name="altphone"  class="textbox2"><br><br>
+				<input type="number" placeholder="Quentity" name="quentity" class="textbox2"><br><br>
+				<input type="submit" value="Confirm Order" class="login">
+				<input style="display: none;" type="text" name="itemname" value="{{ x.bakeryname }}"><br><br>
+				<input style="display: none;" type="tel" name="itemprice" value="{{ x.bakeryprice }}"><br><br>
+				<input style="display: none;" type="text" id="time1" value="" name="ordertime"><br><br>
+				</form>
+		<script type="text/javascript">
+			time= new Date();
+			document.getElementById('time1').value = time;
+		</script>
+			</div>
+		</div>
+		<div class="BigRight">
+			<div class="MiniRight">
+			 <p>After Submitted this Order&ensp;&ensp;<a href="../bakery/finalorder"><button class="login">CONTINUE</button></a></p><br>
+				<img src="{% static 'img/Crlogo.png' %}">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

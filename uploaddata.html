@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}">
+</head>
+<body>
+	<div class="BigLeft">
+		<div class="MiniLeft">
+			<h1>Bakery Details</h1>
+			<form method="post" action="uld">
+				{% csrf_token %}
+				<br><input type="text" placeholder="Name of the Bakery" name="bakeryname" class="textbox"><br><br>
+				<input type="tel" placeholder="Price of this Item" name="bakeryprice" class="textbox"><br><br>
+				<input type="text" placeholder="Enter image name/link" name="bakeryimage" class="textbox"><br><br>
+				<input type="text" placeholder="type of this Bakery(Cake/presti)" name="bakerytype" class="textbox"><br><br>
+				<input type="text" placeholder="Flavour(Butterscotch/Chocolate)" name="bakeryflavour" class="textbox"><br><br>
+				<input type="submit" name="" class="login">
+			</form>
+		</div>
+	</div>
+	<div class="BigRight">
+		<div class="MiniRight">
+			<p>Show All Cakes&ensp;&ensp;<a href="showalldata"><button class="login">SHOW</button></a></p><br>
+			<p>Show All Orders&ensp;&ensp;<a href="showcustomerorder"><button class="login">SHOW</button></a></p><br>
+			<img src="{% static 'img/Crlogo.png' %}">
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}">
+</head>
+<body>
+	<div class="BigLeft">
+		<div class="MiniLeft">
+			<form method="post" action="../edc/{{ x.id }}">
+				{% csrf_token %}
+				<input type="text" placeholder="Name of the Bakery" name="bakeryname" value="{{ x.bakeryname }}" class="textbox2"><br><br>
+				<input type="tel" placeholder="Price of this Item" name="bakeryprice" value="{{ x.bakeryprice }}" class="textbox2"><br><br>
+				<input type="text" name="bakeryimage" placeholder="Enter image name/link" value="{{ x.bakeryimage }}" class="textbox2"><br><br>
+				<input type="text" placeholder="type of this Bakery(Cake/presti)" name="bakerytype" value="{{ x.bakerytype }}" class="textbox2"><br><br>
+				<input type="text" placeholder="Flavour(Butterscotch/Chocolate)" name="bakeryflavour" value="{{ x.bakeryflavour }}" class="textbox2"><br><br>
+				<input type="submit" name="" class="login">
+			</form>
+		</div>
+	</div>
+	<div class="BigRight">
+		<div class="MiniRight">
+				<img src="{% static 'img/Crlogo.png' %}">
+			</div>
+	</div>
+</body>
+</html>
